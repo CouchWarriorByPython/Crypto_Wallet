@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Wallet</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Crypto Wallet</h1>
+    </header>
+    <main>
+        <section id="wallet-info">
+            <div id="wallet-name-container">
+                <span class="wallet-label">Wallet Name:</span>
+                <h3 id="wallet-name-display">Default Wallet</h3>
+            </div>
+            <h3>Wallet Balance:</h3>
+            <p>USDT: <span id="balance-usdt">0</span></p>
+            <p>Bitcoin: <span id="balance-btc">0</span></p>
+        </section>
+        <section id="actions">
+            <button onclick="showCreateWalletForm()">Create Wallet</button>
+            <button onclick="showTopUpForm()">Top Up Account</button>
+            <button onclick="showConvertForm()">Convert Currency</button>
+            <button onclick="showSendForm()">Send Currency</button>
+            <button onclick="redirectToTransactionHistory()">Transaction History</button>
+            <div id="wallet-selection">
+                <h3>Select a Wallet:</h3>
+                <input type="text" id="wallet-search" placeholder="Search Wallets" oninput="filterWallets()" style="margin-bottom: 10px;">
+                <div id="wallets-list"></div>
+            </div>
+        </section>
+        <section id="forms">
+            <!-- Dynamic forms will be inserted here based on action buttons -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Crypto Wallet</p>
+    </footer>
+    <script src="static/scripts.js"></script>
+</body>
+</html>
